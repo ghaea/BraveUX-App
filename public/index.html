@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Brave UX App</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="index.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="app-container">
+
+	<!-- I like to think modularly... so the app was broken down into 3 large sections, the header, body, and footer.  This way, I can work on each section independent of each other. -->
+
+		<div class="header">
+			<div class="left">
+				<div class="app-name">The Brave UX App</div>
+			</div>
+
+			<div class="right">
+				<div class="menu">Menu
+					<div class="full-menu hide">
+						<!-- Again, I like to break things down into chunks, so ther full menu has 3 diffent sections with content.  THe classes are the same because they will have the same css properties -->
+						<div class="first">
+							<div class="link">Dashboard</div>
+							<div class="link">My Profile</div>
+							<div class="link">Settings</div>
+						</div>
+						<div class="second">
+							<div class="link">Help</div>
+							<div class="link">About</div>
+						</div>
+						<div class="third">
+							<div class="link">Logout</div>
+						</div>
+					</div>
+				</div>
+				<div id="hamburger">☰</div>
+			</div>			
+		</div>
+
+		<div class="error hide">
+			<p id="error-message">Your username or password wasn't recognized.</p></div>
+
+		<div class="body">
+			<div class="flag"></div>
+			<div class="warning">Do NOT bookmark this page.</div>
+			<form class="signup-container"><!-- add to form tag ' method="post" ' if this was really being posted -->
+				<div class="signup">Sign Up</div>
+				<div class="username input">
+					Username  <input type="text" name="username"></input>
+				</div>
+				<div class="password input">
+					Password  <input type="password" name="password" id="password-input"></input>
+					<div id="eye">hi</div>
+				</div>
+				<div class="signup-button">
+					<button type="button" id="button">Sign Up</button> <!-- button type should be 'submit', but the page refreshes if it is submit.  If this was live, it will be submit so that the username and password can be sent as a post. -->
+					<div id="help">Need help?</div>
+				</div>
+			</form>
+
+		</div>
+
+		<div class="footer">Powered by Brave UX</div>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+</html>
